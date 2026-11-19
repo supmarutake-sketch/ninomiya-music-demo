@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light" />
+<link rel="icon" href="data:," />
+<title>二宮ようこ音楽教室｜津山市のピアノ・バイオリン・ビオラ教室</title>
+<meta name="description" content="岡山県津山市の音楽教室。ひとりの講師がピアノ・バイオリン・ビオラを教えます。年少さんから大人まで、無料体験レッスン受付中。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: light;
+    --paper:#F7F5F0;
+    --paper-2:#EFEAE2;
+    --ink:#33302B;
+    --ink-soft:#6F695C;
+    --ink-faint:#9C9484;
+    --line:#D8D2C7;
+    --line-dark:#BFB5A1;
+    --accent:#74553A;
+    --accent-text:#5F452C;
+    --bar:#33302B;
+    --bar-line:#4E4A42;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Noto Sans JP", system-ui, -apple-system, sans-serif;
+    line-height:1.9;
+    font-size:15px;
+    padding-bottom:64px;
+    -webkit-font-smoothing:antialiased;
+  }
+  img{display:block; max-width:100%}
+  main img{filter:sepia(.15) saturate(.85)}
+  a{color:inherit}
+  h1,h2,h3{font-family:"Noto Sans JP", system-ui, sans-serif; font-weight:300; letter-spacing:.1em; margin:0}
+  .label{
+    font-family:"Cormorant Garamond",serif; font-style:italic;
+    font-size:13px; letter-spacing:.3em; text-transform:uppercase;
+    color:var(--accent-text); font-weight:500;
+  }
+  .demo-bar{
+    border-bottom:1px solid var(--line);
+    text-align:center;
+    font-size:11px; letter-spacing:.08em; color:var(--ink-soft);
+    padding:7px 14px; line-height:1.6;
+  }
+  header.site{
+    max-width:1120px; margin:0 auto;
+    padding:22px 24px 18px;
+    display:flex; align-items:flex-end; justify-content:space-between; gap:16px;
+    border-bottom:1px solid var(--line);
+  }
+  .brand{text-decoration:none; display:block}
+  .brand-name{font-family:"Cormorant Garamond",serif; font-style:italic; font-size:27px; font-weight:500; letter-spacing:.04em; line-height:1.05; color:var(--ink)}
+  .brand-sub{font-size:10.5px; letter-spacing:.3em; color:var(--ink-soft); margin-top:5px}
+  nav.top{display:none; gap:30px; font-size:12.5px; letter-spacing:.14em; padding-bottom:4px}
+  nav.top a{text-decoration:none; padding:8px 0; min-height:44px; display:inline-flex; align-items:center}
+  nav.top a:hover{color:var(--accent-text)}
+  nav.top a.reserve-link{border-bottom:1px solid var(--accent); color:var(--accent-text); font-weight:700}
+  @media(min-width:820px){ nav.top{display:flex} }
+  @media(max-width:640px){
+    header.site{padding:16px 16px 14px}
+    .brand-name{font-size:23px}
+    .brand-sub{font-size:9.5px; letter-spacing:.22em}
+  }
+  .sp-reserve{
+    display:inline-flex; align-items:center; min-height:44px;
+    font-size:12.5px; letter-spacing:.14em; font-weight:700; color:var(--accent-text);
+    text-decoration:none; border-bottom:1px solid var(--accent); padding-bottom:2px; flex:none;
+  }
+  @media(min-width:820px){ .sp-reserve{display:none} }
+  .wrap{max-width:1120px; margin:0 auto; padding:0 24px}
+  @media(max-width:640px){ .wrap{padding:0 16px} }
+
+  /* hero */
+  .hero{max-width:1120px; margin:0 auto; padding:34px 24px 0; position:relative}
+  @media(max-width:640px){ .hero{padding:22px 16px 0} }
+  .hero-photo{position:relative; margin-left:auto; width:100%}
+  .hero-photo img{width:100%; height:300px; object-fit:cover}
+  .vertical{
+    writing-mode:vertical-rl; text-orientation:mixed;
+    font-family:"Noto Sans JP",sans-serif; font-weight:300; font-size:13px; letter-spacing:.22em;
+    color:var(--ink);
+    background:var(--paper);
+    position:absolute; top:12px; left:12px; height:276px; z-index:3;
+    display:flex; align-items:center; justify-content:center; white-space:nowrap;
+    padding:10px 5px;
+  }
+  .hero-caption{font-size:10.5px; color:var(--ink-faint); letter-spacing:.06em; margin-top:8px; text-align:right}
+  .hero-text{padding-top:26px; max-width:640px}
+  .hero-text .label{display:flex; align-items:center; gap:14px}
+  .hero-text .label::after{content:""; flex:0 0 44px; height:1px; background:var(--line-dark)}
+  .hero-text h1{font-size:29px; line-height:1.8; letter-spacing:.12em; margin-top:18px; font-weight:300}
+  .hero-lead{font-size:14.5px; color:var(--ink-soft); margin-top:18px; max-width:520px}
+  .hero-meta{
+    display:flex; flex-wrap:wrap; gap:6px 22px; margin-top:20px;
+    font-size:12px; letter-spacing:.12em; color:var(--ink-soft);
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line); padding:10px 0;
+  }
+  .hero-actions{display:flex; flex-wrap:wrap; align-items:center; gap:14px 26px; margin-top:24px}
+  .btn-flat{
+    display:inline-flex; align-items:center; justify-content:center;
+    background:var(--ink); color:var(--paper); text-decoration:none;
+    min-height:52px; padding:12px 30px; font-size:14px; font-weight:500; letter-spacing:.12em;
+  }
+  .text-link{
+    display:inline-flex; align-items:center; min-height:44px;
+    font-size:13.5px; letter-spacing:.08em; color:var(--accent-text); font-weight:700;
+    text-decoration:none; border-bottom:1px solid var(--accent); padding-bottom:2px;
+  }
+  @media(min-width:900px){
+    .hero{padding-top:46px}
+    .hero-photo{width:66%}
+    .hero-photo img{height:540px}
+    .vertical{display:flex; height:460px; font-size:16px; letter-spacing:.42em; left:auto; right:26px; top:36px; padding:20px 7px}
+    .hero-text{
+      position:absolute; left:24px; bottom:34px; z-index:2;
+      background:var(--paper);
+      padding:36px 40px 32px 6px;
+      max-width:560px;
+    }
+    .hero-text h1{font-size:34px}
+    .hero-caption{position:absolute; right:0; bottom:-24px}
+  }
+
+  /* sections */
+  section{padding:76px 0 0}
+  @media(max-width:640px){ section{padding:58px 0 0} }
+  .sec-head{margin-bottom:34px}
+  .sec-head .label{display:flex; align-items:center; gap:16px}
+  .sec-head .label::after{content:""; flex:1; height:1px; background:var(--line)}
+  .sec-head h2{font-size:25px; letter-spacing:.16em; margin-top:14px}
+  .sec-head p{color:var(--ink-soft); font-size:14px; max-width:600px; margin:12px 0 0}
+
+  /* concept */
+  .concept{position:relative; margin-top:8px}
+  .concept-photo{width:100%}
+  .concept-photo img{width:100%; height:300px; object-fit:cover}
+  .concept-photo figcaption{font-size:10.5px; color:var(--ink-faint); margin-top:8px; letter-spacing:.06em}
+  .concept-text{padding-top:26px}
+  .concept-text h3{font-size:21px; letter-spacing:.12em; line-height:1.8}
+  .concept-text p{color:var(--ink-soft); font-size:14.5px}
+  .fact-rows{margin-top:22px; border-top:1px solid var(--line)}
+  .fact-rows .row{display:flex; gap:18px; padding:9px 0; border-bottom:1px solid var(--line); font-size:13.5px}
+  .fact-rows dt{flex:0 0 74px; color:var(--ink-faint); font-size:12px; letter-spacing:.14em; padding-top:3px}
+  .fact-rows dd{margin:0}
+  @media(min-width:900px){
+    .concept{display:grid; grid-template-columns:58% 42%; align-items:start}
+    .concept-photo img{height:460px}
+    .concept-text{
+      background:var(--paper);
+      margin-left:-72px; margin-top:64px;
+      padding:34px 6px 10px 40px;
+      position:relative; z-index:2;
+    }
+  }
+  .offset-photo{margin-top:44px}
+  .offset-photo img{width:100%; height:280px; object-fit:cover}
+  .offset-photo figcaption{font-size:10.5px; color:var(--ink-faint); margin-top:8px; letter-spacing:.06em}
+  @media(min-width:900px){
+    .offset-photo{width:52%; margin-left:auto; margin-top:6px}
+    .offset-photo img{height:330px}
+  }
+
+  /* menu */
+  .menu-list{border-top:1px solid var(--line-dark)}
+  .menu-item{
+    display:grid; grid-template-columns:52px 1fr; gap:6px 16px;
+    padding:28px 0 26px; border-bottom:1px solid var(--line);
+  }
+  .menu-no{font-family:"Cormorant Garamond",serif; font-style:italic; font-size:27px; font-weight:500; color:var(--accent-text); line-height:1.2; padding-top:2px}
+  .menu-main h3{font-size:19px; letter-spacing:.1em; line-height:1.6; font-weight:400}
+  .menu-en{font-family:"Cormorant Garamond",serif; font-style:italic; font-size:12px; letter-spacing:.26em; text-transform:uppercase; color:var(--ink-faint); margin-top:3px}
+  .menu-main p{font-size:13.5px; color:var(--ink-soft); margin:10px 0 0; max-width:560px}
+  .menu-side{grid-column:2; display:flex; align-items:baseline; justify-content:space-between; gap:16px; margin-top:12px}
+  .menu-dur{font-size:12px; color:var(--ink-soft); letter-spacing:.06em}
+  .menu-price{font-family:"Cormorant Garamond",serif; font-size:28px; font-weight:600; letter-spacing:.03em; white-space:nowrap}
+  @media(min-width:820px){
+    .menu-item{grid-template-columns:72px 1fr auto; gap:6px 26px; align-items:start}
+    .menu-no{font-size:33px}
+    .menu-side{grid-column:3; grid-row:1; flex-direction:column; align-items:flex-end; justify-content:flex-start; gap:4px; margin-top:2px; text-align:right}
+    .menu-price{font-size:30px}
+  }
+  .menu-footnote{font-size:12.5px; color:var(--ink-soft); margin-top:18px; letter-spacing:.04em}
+  .menu-footnote strong{color:var(--ink)}
+
+  /* teacher band */
+  .band{background:var(--paper-2); color:var(--ink); margin-top:84px}
+  .band-inner{max-width:1120px; margin:0 auto; padding:48px 24px 52px; position:relative}
+  .band .label{color:var(--accent-text)}
+  .band h3{color:var(--ink); font-size:23px; letter-spacing:.14em; margin-top:14px}
+  .band p{color:var(--ink-soft); font-size:14px; max-width:560px}
+  .band .text-link{color:var(--accent-text); border-bottom-color:var(--accent)}
+  .band-photo{margin-top:28px}
+  .band-photo img{width:100%; height:230px; object-fit:cover}
+  .band-photo figcaption{font-size:10.5px; color:var(--ink-faint); margin-top:8px; letter-spacing:.06em}
+  @media(min-width:900px){
+    .band-inner{display:grid; grid-template-columns:1fr 380px; gap:56px; padding:60px 24px 64px}
+    .band-photo{margin-top:-92px}
+    .band-photo img{height:300px}
+  }
+  @media(max-width:640px){ .band-inner{padding:40px 16px 44px} }
+
+  /* reserve */
+  .reserve-cols{display:grid; border-top:1px solid var(--line-dark)}
+  .reserve-col{padding:26px 0 8px; border-bottom:1px solid var(--line)}
+  .reserve-col .label{font-size:12px}
+  .reserve-col h3{font-size:17px; letter-spacing:.12em; margin-top:10px; font-weight:400}
+  .reserve-value{font-family:"Cormorant Garamond",serif; font-size:25px; font-weight:600; letter-spacing:.05em; margin-top:10px; word-break:break-all}
+  .reserve-value.small{font-size:17px; font-style:italic; font-weight:500; letter-spacing:.02em}
+  .reserve-col p{font-size:13px; color:var(--ink-soft); margin:6px 0 0}
+  .reserve-col .text-link{margin-top:12px}
+  @media(min-width:820px){
+    .reserve-cols{grid-template-columns:repeat(2,1fr)}
+    .reserve-col{border-bottom:none; padding:30px 30px 6px 0}
+    .reserve-col + .reserve-col{border-left:1px solid var(--line); padding-left:30px}
+  }
+
+  /* access */
+  .info-grid{display:grid; gap:44px}
+  @media(min-width:900px){ .info-grid{grid-template-columns:1fr 1fr; gap:64px} }
+  .info-block h3{font-size:18px; letter-spacing:.12em; font-weight:400; padding-bottom:12px; border-bottom:1px solid var(--line-dark); margin:0}
+  .info-block dl{margin:0}
+  .info-block .row{display:flex; gap:18px; padding:11px 0; border-bottom:1px solid var(--line); font-size:14px}
+  .info-block dt{flex:0 0 72px; color:var(--ink-faint); font-size:12px; letter-spacing:.14em; padding-top:4px}
+  .info-block dd{margin:0; flex:1}
+  .map-link{margin-top:18px}
+
+  /* footer */
+  footer{margin-top:84px; background:var(--paper-2); border-top:1px solid var(--line); padding:44px 24px 36px}
+  .footer-inner{max-width:1120px; margin:0 auto}
+  .footer-brand{font-family:"Cormorant Garamond",serif; font-style:italic; font-size:27px; font-weight:500; letter-spacing:.04em}
+  .footer-sub{font-size:10.5px; letter-spacing:.3em; color:var(--ink-soft); margin-top:4px}
+  .footer-info{font-size:12.5px; color:var(--ink-soft); line-height:2.1; margin-top:20px}
+  .footer-note{font-size:11px; color:var(--ink-faint); margin-top:14px}
+  .footer-demo{margin-top:22px; padding-top:16px; border-top:1px solid var(--line-dark); font-size:11.5px; color:var(--ink-soft); letter-spacing:.04em}
+  .footer-copy{margin-top:14px; font-size:11px; color:var(--ink-faint); font-family:"Cormorant Garamond",serif; font-style:italic; letter-spacing:.18em}
+
+  /* fixed bar — flat, no shadow */
+  .fixed-bar{
+    position:fixed; left:0; right:0; bottom:0; z-index:50;
+    background:var(--bar);
+    display:grid; grid-template-columns:1fr 1fr;
+    padding-bottom:env(safe-area-inset-bottom);
+  }
+  .fixed-bar a{
+    display:flex; align-items:center; justify-content:center; gap:10px;
+    min-height:58px; text-decoration:none; color:#F7F5F0; padding:8px 10px;
+  }
+  .fixed-bar a + a{border-left:1px solid var(--bar-line)}
+  .fixed-bar .fb-label{text-align:left; line-height:1.35; font-size:13.5px; font-weight:500; letter-spacing:.1em}
+  .fixed-bar small{display:block; font-size:10.5px; font-weight:400; opacity:.75; letter-spacing:.06em}
+</style>
+</head>
+<body>
+
+<div class="demo-bar">制作デモ ｜ 二宮ようこ音楽教室 様向けに作成したホームページの見本です</div>
+
+<header class="site">
+  <a class="brand" href="#top" aria-label="二宮ようこ音楽教室 トップへ">
+    <span class="brand-name">Ninomiya Music</span>
+    <span class="brand-sub" style="display:block">二宮ようこ音楽教室 ・ 津山</span>
+  </a>
+  <nav class="top" aria-label="メインナビゲーション">
+    <a href="#about">教室について</a>
+    <a href="#lesson">レッスン・料金</a>
+    <a href="#teacher">講師</a>
+    <a href="#access">アクセス</a>
+    <a class="reserve-link" href="#contact">無料体験</a>
+  </nav>
+  <a class="sp-reserve" href="#contact">無料体験</a>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <div class="hero">
+    <figure class="hero-photo" style="margin-top:0; margin-bottom:0">
+      <span class="vertical" aria-hidden="true">ひとりの講師が、三つの楽器を</span>
+      <img src="https://images.unsplash.com/photo-1465821185615-20b3c2fbf41b?q=80&w=1600&auto=format&fit=crop" alt="バイオリンを演奏する女性" />
+      <figcaption class="hero-caption">※ 写真はイメージです</figcaption>
+    </figure>
+    <div class="hero-text">
+      <div class="label">Ninomiya Music — Tsuyama, Okayama</div>
+      <h1>ピアノ、バイオリン、<br>ビオラ。<br>ひとりの講師が教えます</h1>
+      <p class="hero-lead">岡山県津山市、高野小学校の近くにある音楽教室です。当教室では1人の講師が、ピアノ・バイオリン・ビオラのレッスンをさせていただいております。</p>
+      <div class="hero-meta">
+        <span>無料体験レッスン 受付中</span>
+        <span>年少さん〜大人</span>
+        <span>年間43回（発表会を含む）</span>
+      </div>
+      <div class="hero-actions">
+        <a class="btn-flat" href="tel:09028088317">電話で問い合わせる</a>
+        <a class="text-link" href="#lesson">レッスン・料金を見る →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="label">About</div>
+        <h2>それぞれの思いやペースに合わせたレッスン</h2>
+      </div>
+      <div class="concept">
+        <figure class="concept-photo" style="margin:0">
+          <img src="https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?q=80&w=1600&auto=format&fit=crop" alt="木の台の上に置かれたバイオリン" />
+          <figcaption>※ 写真はイメージです</figcaption>
+        </figure>
+        <div class="concept-text">
+          <h3>「趣味で始めてみたい」<br>「もう一度やってみようかな」</h3>
+          <p>「憧れの曲を弾けるようになりたい」——一人一人、それぞれの思いやペースに合わせたレッスンを心がけております。レッスンを通じて生徒さん、保護者の方とのコミュニケーションも大切にしたいと思っています。</p>
+          <dl class="fact-rows">
+            <div class="row"><dt>楽器</dt><dd>ピアノ／バイオリン／ビオラ</dd></div>
+            <div class="row"><dt>対象</dt><dd>年少さん〜大人</dd></div>
+            <div class="row"><dt>回数</dt><dd>年間43回レッスン（発表会を含む）</dd></div>
+            <div class="row"><dt>体験</dt><dd>無料体験レッスン受付中</dd></div>
+          </dl>
+        </div>
+      </div>
+      <figure class="offset-photo" style="margin-bottom:0">
+        <img src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?q=80&w=1600&auto=format&fit=crop" alt="オーケストラの弦楽器セクション" />
+        <figcaption>アンサンブルのイメージ　※ 写真はイメージです</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- LESSON -->
+  <section id="lesson">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="label">Lesson &amp; Fee</div>
+        <h2>レッスン・料金</h2>
+        <p>月額制の定期レッスンと、1回ごとの予約制レッスンをご用意しています。料金はいずれも月額（1レッスンコースは1回ごと）です。</p>
+      </div>
+      <div class="menu-list">
+        <article class="menu-item">
+          <div class="menu-no">01</div>
+          <div class="menu-main">
+            <h3>ピアノ</h3>
+            <div class="menu-en">Piano</div>
+            <p>年少さん〜大人。鍵盤を押せば音が鳴る楽器ですが、弾き方次第で様々な音色を奏でることができます。基礎から始めて、だんだんと色々な曲にチャレンジしていきましょう。YAMAHAアップライトピアノでのレッスンとなります（別途教材費が必要です）。</p>
+          </div>
+          <div class="menu-side">
+            <span class="menu-dur">30分／月額（60分は10,000円）</span>
+            <span class="menu-price">¥6,000</span>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-no">02</div>
+          <div class="menu-main">
+            <h3>バイオリン</h3>
+            <div class="menu-en">Violin</div>
+            <p>年少さん〜大人。華やかな音色を奏でる弦楽器です。クラシックからポピュラーまで演奏することができ、弾けるようになってくるとオーケストラなどアンサンブルを楽しむこともできます。ご自身の楽器で受講していただきます（教材費など別途必要です）。</p>
+          </div>
+          <div class="menu-side">
+            <span class="menu-dur">30分／月額（60分は10,000円）</span>
+            <span class="menu-price">¥6,000</span>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-no">03</div>
+          <div class="menu-main">
+            <h3>ビオラ</h3>
+            <div class="menu-en">Viola</div>
+            <p>バイオリンより一回り大きい楽器で、とても温かい音色です。アンサンブルでは皆を支える大切な役割を担っています。子供用の楽器がないため、大人になってから始められる方が多い楽器です。ご自身の楽器で受講していただきます。</p>
+          </div>
+          <div class="menu-side">
+            <span class="menu-dur">30分／月額（60分は10,000円）</span>
+            <span class="menu-price">¥6,000</span>
+          </div>
+        </article>
+        <article class="menu-item">
+          <div class="menu-no">04</div>
+          <div class="menu-main">
+            <h3>1レッスンコース</h3>
+            <div class="menu-en">Single Lesson</div>
+            <p>高校生〜大人。お仕事や学校などで定期的なレッスンが難しい方におすすめの、1レッスンごとの予約制レッスンです。全ての楽器共通の料金です。</p>
+          </div>
+          <div class="menu-side">
+            <span class="menu-dur">30分 2,000円／60分 3,000円</span>
+            <span class="menu-price">¥2,000〜</span>
+          </div>
+        </article>
+      </div>
+      <p class="menu-footnote">バイオリン・ビオラは、楽器をお持ちでない方は<strong>ご相談ください</strong>。無料体験レッスンも受け付けています。</p>
+    </div>
+  </section>
+
+  <!-- TEACHER -->
+  <section id="teacher" style="padding-top:0">
+    <div class="band">
+      <div class="band-inner">
+        <div>
+          <div class="label">Teacher</div>
+          <h3>講師紹介</h3>
+          <p><strong>二宮陽子</strong></p>
+          <p>岡山県作陽高校音楽科を経て、くらしき作陽大学音楽学部教育音楽学科へ。在学中にピアノからヴィオラに転向しました。大学卒業後は津山市へ戻り、ピアノやバイオリンの個人レッスンをしながら、ヴィオラ奏者として倉敷アカデミーアンサンブルに所属。母校・作陽高等学校では非常勤講師としてソルフェージュなどを受け持ちました。ピアノからヴィオラへ転向した変わり種だからこそ得られたことを、レッスンで生かしていきます。</p>
+          <a class="text-link" href="#contact">講師へのお問い合わせ →</a>
+        </div>
+        <figure class="band-photo" style="margin-bottom:0">
+          <img src="https://images.unsplash.com/photo-1519683109079-d5f539e1542f?q=80&w=1200&auto=format&fit=crop" alt="コンサートホールのイメージ" />
+          <figcaption>※ 写真はイメージです</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="label">Contact</div>
+        <h2>無料体験・お問い合わせ</h2>
+        <p><strong>無料体験レッスン受付中。</strong>体験レッスンをご希望の方、ご質問などは、お電話・Eメール・InstagramのDMでお気軽にご予約、お問い合わせください。</p>
+      </div>
+      <div class="reserve-cols">
+        <div class="reserve-col">
+          <div class="label">Tel</div>
+          <h3>お電話で問い合わせ</h3>
+          <div class="reserve-value">090-2808-8317</div>
+          <p>ショートメールでのお問い合わせも可能です</p>
+          <a class="text-link" href="tel:09028088317">電話をかける →</a>
+        </div>
+        <div class="reserve-col">
+          <div class="label">Mail</div>
+          <h3>メールで問い合わせ</h3>
+          <div class="reserve-value small">satsukiyuzu@yahoo.co.jp</div>
+          <p>体験レッスンのご予約・ご質問はこちらへ</p>
+          <a class="text-link" href="mailto:satsukiyuzu@yahoo.co.jp">メールを送る →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACCESS -->
+  <section id="access">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="label">Access</div>
+        <h2>アクセス・教室情報</h2>
+      </div>
+      <div class="info-grid">
+        <div class="info-block">
+          <h3>アクセス</h3>
+          <dl>
+            <div class="row"><dt>住所</dt><dd>岡山県津山市高野本郷928-6</dd></div>
+            <div class="row"><dt>目印</dt><dd>高野小学校の近く</dd></div>
+          </dl>
+          <a class="text-link map-link" href="https://www.google.com/maps/search/?api=1&query=%E5%B2%A1%E5%B1%B1%E7%9C%8C%E6%B4%A5%E5%B1%B1%E5%B8%82%E9%AB%98%E9%87%8E%E6%9C%AC%E9%83%B7928-6" target="_blank" rel="noopener">Googleマップで見る →</a>
+        </div>
+        <div class="info-block">
+          <h3>教室情報</h3>
+          <dl>
+            <div class="row"><dt>教室名</dt><dd>二宮ようこ音楽教室</dd></div>
+            <div class="row"><dt>講師</dt><dd>二宮陽子</dd></div>
+            <div class="row"><dt>楽器</dt><dd>ピアノ／バイオリン／ビオラ</dd></div>
+            <div class="row"><dt>体験</dt><dd>無料体験レッスン受付中</dd></div>
+            <div class="row"><dt>電話</dt><dd><a href="tel:09028088317" style="font-weight:700">090-2808-8317</a></dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">Ninomiya Music</div>
+    <div class="footer-sub">二宮ようこ音楽教室 ・ 津山</div>
+    <p class="footer-info">岡山県津山市高野本郷928-6 ｜ TEL 090-2808-8317<br>ピアノ／バイオリン／ビオラ ｜ 無料体験レッスン 受付中</p>
+    <p class="footer-note">※ 掲載写真は教室の雰囲気をイメージした写真です。実際の教室の写真ではありません。</p>
+    <p class="footer-demo">※このページはホームページ制作のデモ（見本）です。内容は店舗の公開情報をもとに作成しています。</p>
+    <p class="footer-copy">© NINOMIYA MUSIC — DEMO PAGE</p>
+  </div>
+</footer>
+
+<nav class="fixed-bar" aria-label="お問い合わせショートカット">
+  <a href="tel:09028088317">
+    <span class="fb-label">電話で問い合わせ<small>090-2808-8317</small></span>
+  </a>
+  <a href="#contact">
+    <span class="fb-label">無料体験<small>受付中</small></span>
+  </a>
+</nav>
+
+</body>
+</html>
